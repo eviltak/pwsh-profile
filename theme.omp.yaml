@@ -16,14 +16,14 @@ blocks:
           background: '#0077c2'
           type: shell
           style: diamond
-        - template: '<parentBackground></>  '
+        - template: '<parentBackground></>  '
           foreground: '#FFFB38'
           background: '#ef5350'
           type: root
           style: diamond
         - properties:
             folder_icon: '  '
-            home_icon: 
+            home_icon: '~'
             style: powerlevel
             max_width: 40
           template: ' {{ .Path }}'
