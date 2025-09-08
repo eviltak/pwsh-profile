@@ -11,7 +11,7 @@ blocks:
       alignment: left
       segments:
         - leading_diamond: ╭─
-          template: ' {{ .Name }} '
+          template: ' {{ .Name }}'
           foreground: '#ffffff'
           background: '#0077c2'
           type: shell
@@ -26,22 +26,22 @@ blocks:
             home_icon: 
             style: powerlevel
             max_width: 1
-          template: '  {{ .Path }} '
+          template: ' {{ .Path }}'
           foreground: '#2d3436'
-          powerline_symbol: 
+          powerline_symbol: 
           background: '#FF9248'
           type: path
           style: powerline
         - properties:
-            branch_icon: ' '
+            branch_icon: '  '
             fetch_status: true
             fetch_upstream_icon: true
             branch_template: '{{ $split := splitList "/" .Branch }}{{ $len := len $split }}{{ range $i, $s := $split }}{{ truncE 8 $s }}{{ $nextIndex := add1 $i }}{{ if lt $nextIndex $len }}/{{ end }}{{ end }}'
             mapped_branches:
               "user/*": ""
-          template: ' {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#ef5350>  {{ .Staging.String }}</>{{ end }} '
+          template: ' {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#ef5350>  {{ .Staging.String }}</>{{ end }}'
           foreground: '#011627'
-          powerline_symbol: 
+          powerline_symbol: 
           background: '#FFFB38'
           type: git
           style: powerline
@@ -54,7 +54,7 @@ blocks:
             style: roundrock
             threshold: 0
           trailing_diamond: 
-          template: '  {{ .FormattedMs }}⠀'
+          template: '  {{ .FormattedMs }}'
           foreground: '#ffffff'
           background: '#83769c'
           type: executiontime
@@ -177,7 +177,7 @@ blocks:
             windows: 
           leading_diamond: 
           trailing_diamond: <transparent,background></>
-          template: ' {{ if .WSL }}WSL at {{ end }}{{.Icon}} '
+          template: '{{ if .WSL }}WSL at {{ end }}{{.Icon}} '
           foreground: '#222222'
           background: '#b2bec3'
           type: os
@@ -201,7 +201,7 @@ blocks:
             time_format: _2,15:04
           leading_diamond: 
           trailing_diamond: 
-          template: '  {{ .CurrentDate | date .Format }} '
+          template: '  {{ .CurrentDate | date .Format }}'
           foreground: '#ffffff'
           background: '#40c4ff'
           type: time
