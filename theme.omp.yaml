@@ -25,7 +25,7 @@ blocks:
             folder_icon: '  '
             home_icon: 
             style: powerlevel
-            max_width: 1
+            max_width: 40
           template: ' {{ .Path }}'
           foreground: '#2d3436'
           powerline_symbol: 
