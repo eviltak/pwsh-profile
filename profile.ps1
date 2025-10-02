@@ -8,3 +8,6 @@ Set-PSReadLineKeyHandler -Chord 'DownArrow' -Function HistorySearchForward
 Set-PSReadLineKeyHandler -Chord Tab -Function MenuComplete
 
 Import-Module git-completion
+
+### Environment variables
+$env:EDITOR = "vim"
