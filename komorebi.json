@@ -16,5 +16,11 @@
     "bar_accent": "Base0D"
   },
   "monitors": [
+  ],
+  "bar_configurations": [
+    "$Env:USERPROFILE/komorebi.bar.monitor0.json",
+    "$Env:USERPROFILE/komorebi.bar.monitor1.json",
+    "$Env:USERPROFILE/komorebi.bar.monitor2.json",
+    "$Env:USERPROFILE/komorebi.bar.monitor3.json"
   ]
 }

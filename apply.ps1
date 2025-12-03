@@ -1,5 +1,15 @@
-# Symlink komorebi config files into USERPROFILE
-$komorebiFiles = @('komorebi.bar.json', 'komorebi.json')
+# Create 4 komorebi bar configs for 4 monitors
+$templatePath = Join-Path $PSScriptRoot 'komorebi.bar.json'
+$template = Get-Content $templatePath -Raw | ConvertFrom-Json
+for ($i = 0; $i -lt 4; $i++) {
+    $config = $template | ConvertTo-Json -Depth 10 | ConvertFrom-Json
+    $config.monitor = $i
+    $outputPath = Join-Path $env:USERPROFILE "komorebi.bar.monitor$i.json"
+    $config | ConvertTo-Json -Depth 10 | Set-Content -Path $outputPath
+}
+
+# Symlink komorebi.json into USERPROFILE
+$komorebiFiles = @('komorebi.json')
 foreach ($file in $komorebiFiles) {
     $source = Join-Path $PSScriptRoot $file
     $target = Join-Path $env:USERPROFILE $file
