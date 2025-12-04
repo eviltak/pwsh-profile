@@ -11,6 +11,7 @@ win + alt + i           : komorebic toggle-shortcuts
 # The apps will be focused if open, or launched if not open
 # alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
 # alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
+win + t                 : $wt = Get-Process -Name WindowsTerminal -FileVersionInfo -ErrorAction SilentlyContinue; if ($wt) { $exe = Split-Path $wt.FileName -Leaf; komorebic eager-focus $exe } else { Start-Process wt }
 
 win + q                 : komorebic close
 win + m                 : komorebic minimize
