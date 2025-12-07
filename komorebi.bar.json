@@ -38,35 +38,39 @@
     },
     {
       "Storage": {
-        "enable": true
+        "enable": false
       }
     },
     {
       "Cpu": {
+        "data_refresh_interval": 2,
         "enable": true
       }
     },
     {
       "Memory": {
+        "data_refresh_interval": 2,
         "enable": true
       }
     },
     {
       "Network": {
-        "enable": true,
-        "show_total_data_transmitted": false,
-        "show_network_activity": true
+        "show_activity": true,
+        "show_default_interface": false,
+        "show_total_activity": false,
+        "data_refresh_interval": 2,
+        "enable": true
       }
     },
     {
       "Date": {
-        "enable": true,
+        "enable": false,
         "format": "DayDateMonthYear"
       }
     },
     {
       "Time": {
-        "enable": true,
+        "enable": false,
         "format": "TwentyFourHour"
       }
     },
